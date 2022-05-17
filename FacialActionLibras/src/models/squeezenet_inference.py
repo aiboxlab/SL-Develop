@@ -5,7 +5,7 @@ PARA REALIZAR PREDIÇÕOS COM O SQUEEZENET USE squeezenet_inference_pp_experimen
 E ESCOLHA O EXTRATOR DE FEATURES DESEJADO (mediapipe, dlib) 
 O arquivo encontra-se nesse mesmo diretório!"""
 
-import pickle as pkl
+import pickle5 as pkl
 import xml.etree.ElementTree as etree
 import xml.etree.ElementTree as et
 from xml.dom import minidom
