@@ -394,6 +394,8 @@ def neural_net(path, name_video, df_results, image_path=None, save=False, extrac
         ret, im = v_entry.read()
         if ret is True:
 
+            c = []
+
             if(extractor == 'mediapipe'):
                 a, c = crop_face_mediapipe(im, i, image_path, save)
                 #c = get_landmarks_mediapipe_selected(a)
