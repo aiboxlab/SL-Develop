@@ -1,0 +1,13 @@
+Input:../../data/examples/me.jpg
+Input full path:/home/jms2/Documentos/projetos/2-way-libras/FacialActionLibras/data/examples/me.jpg
+Camera parameters:583.333,583.333,320,320
+Output HOG:me.hog
+Output image:me.jpg
+Output aligned directory:me_aligned
+Output csv:me.csv
+Gaze: 1
+AUs: 1
+Landmarks 2D: 1
+Landmarks 3D: 1
+Pose: 1
+Shape parameters: 1

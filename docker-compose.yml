@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  tspnet:
+    container_name: tsp_net
+    build:
+      context: ./TSPNet
+      dockerfile: TSPNET.Dockerfile
+    command: /bin/bash
+    volumes:
+      - ./TSPNet:/tsp
+
+  dlib:
+    container_name: dlib
+    build:
+      context: ./dlib
+      dockerfile: dlib.Dockerfile
+    command: /bin/bash
+    hostname: '127.0.0.1'
+    ports: 
+      - "8888:8888"
+    volumes:
+      - ./dlib:/dlib

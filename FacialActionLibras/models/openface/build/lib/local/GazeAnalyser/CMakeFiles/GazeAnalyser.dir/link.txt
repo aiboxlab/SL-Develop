@@ -1,0 +1,2 @@
+/usr/bin/ar qc libGazeAnalyser.a  CMakeFiles/GazeAnalyser.dir/src/GazeEstimation.cpp.o
+/usr/bin/ranlib libGazeAnalyser.a

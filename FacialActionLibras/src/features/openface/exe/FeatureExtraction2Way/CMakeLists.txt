@@ -1,0 +1,11 @@
+# Local libraries
+include_directories(${LandmarkDetector_SOURCE_DIR}/include)
+	
+add_executable(FeatureExtraction2Way FeatureExtraction2Way.cpp)
+
+target_link_libraries(FeatureExtraction2Way LandmarkDetector)
+target_link_libraries(FeatureExtraction2Way FaceAnalyser)
+target_link_libraries(FeatureExtraction2Way GazeAnalyser)
+target_link_libraries(FeatureExtraction2Way Utilities)
+
+install (TARGETS FeatureExtraction2Way DESTINATION bin)
