@@ -12,6 +12,9 @@ from utils.utils import create_directory, get_all_files_from_directory
 
 def make_model_inference():
     files_name = get_all_files_from_directory("../data/raw/videos/*.mp4")
+
+    print(files_name)
+
     for file in files_name:
         _f = file.split(".mp4")
         _f = _f[0].split("/")
