@@ -4,7 +4,7 @@ e a lógica de execução conforme os parâmetros escolhidos em
 FacialActionLibras/src/pipeline_experimental_extratores.py
 """
 
-import pickle as pkl
+import pickle5 as pkl
 import xml.etree.ElementTree as etree
 import xml.etree.ElementTree as et
 from xml.dom import minidom
