@@ -397,13 +397,16 @@ def neural_net(path, name_video, df_results, image_path=None, save=False, extrac
             c = []
 
             if(extractor == 'mediapipe'):
+                print("MEDIAPIPE")
                 a, c = crop_face_mediapipe(im, i, image_path, save)
                 #c = get_landmarks_mediapipe_selected(a)
             elif(extractor == 'dlib'):
+                print("DLIB")
                 #a, l = crop_face_dlib(im, i, image_path, save)
                 a = im
                 c = get_landmarks(a)
             elif(extractor == 'mediapipeVMaan'):
+                print("MEDIAPIPEVM")
                 a, l = crop_face_mediapipe(im, i, image_path, save)
                 #a = im
                 c = _get_landmarks_mediapipe(a)

@@ -2,7 +2,7 @@ import numpy as np
 from datetime import datetime
 
 from config.config import ROOT_DIR
-from models.squeezenet_inference import (
+from models.squeezenet_inference_pp_experimental import (
     #get_face_info,
     img_write,
     neural_net,
