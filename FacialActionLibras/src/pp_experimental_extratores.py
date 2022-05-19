@@ -150,7 +150,8 @@ if __name__ == "__main__":
     # raw_base = "DISFA-Video_RightCamera-1video"
     raw_base = "HM-Libras"
 
-## DLIB 
+## DLIB
+    """
     crop = True
     factor = 1.15
     extractor = 'dlib'
@@ -162,6 +163,7 @@ if __name__ == "__main__":
     extractor = 'dlib'
     config_experimental = set_configuration(extractor, crop, factor, '{}_crop_{}_factor_{}'.format(extractor, crop, str(factor).replace(".", "")))
     predict_all_db(raw_base, config_experimental)
+    """
 
     """crop = False
     factor = 1.01
@@ -209,6 +211,13 @@ if __name__ == "__main__":
     predict_all_db(raw_base, config_experimental)"""
 
     crop = True
+    factor = 0.05
+    extractor = 'mediapipe_id'
+    config_experimental = set_configuration(extractor, crop, factor, '{}_crop_{}_factor_{}'.format(extractor, crop, str(factor).replace(".", "")))
+    predict_all_db(raw_base, config_experimental)
+
+    """
+    crop = True
     factor = 0
     extractor = 'mediapipe_id'
     config_experimental = set_configuration(extractor, crop, factor, '{}_crop_{}_factor_{}'.format(extractor, crop, str(factor).replace(".", "")))
@@ -225,6 +234,7 @@ if __name__ == "__main__":
     extractor = 'mediapipe_id'
     config_experimental = set_configuration(extractor, crop, factor, '{}_crop_{}_factor_{}'.format(extractor, crop, str(factor).replace(".", "")))
     predict_all_db(raw_base, config_experimental)
+    """
 
 ## AUTOENCODER
     """crop = False
@@ -252,6 +262,7 @@ if __name__ == "__main__":
     predict_all_db(raw_base, config_experimental)"""
 
 ## MEDIAPIPE ID + CASCADE DETECTOR
+    """
     crop = True
     factor = 1.15
     extractor = 'mediapipe_cascade'
@@ -263,3 +274,4 @@ if __name__ == "__main__":
     extractor = 'mediapipe_cascade'
     config_experimental = set_configuration(extractor, crop, factor, '{}_crop_{}_factor_{}'.format(extractor, crop, str(factor).replace(".", "")))
     predict_all_db(raw_base, config_experimental)
+    """
