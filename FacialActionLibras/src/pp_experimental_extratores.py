@@ -75,7 +75,11 @@ def predict_all_db(base, config_experimental):
     print("Quantidade de Vídeos: " + str(len(lst_videos)))
 
 
-    for vid in sorted(lst_videos):  # mude para percorrer toda a base [:5]
+    for i, vid in enumerate(sorted(lst_videos)):  # mude para percorrer toda a base [:5]
+
+        if i < 319:
+            continue
+
         split_path = vid.split("/")
         nome_video = split_path[-1].split(".")[0]
         new_path_frames = None
