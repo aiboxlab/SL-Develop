@@ -110,7 +110,7 @@ def predict_all_db(base, config_experimental):
 
         if old_name != "":
             print("Delete:",old_name)
-            os.remove(old_name+".csv")
+            os.remove(old_name)
 
         old_name = name
 
