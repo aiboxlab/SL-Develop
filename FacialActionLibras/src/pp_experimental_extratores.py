@@ -6,6 +6,7 @@ env: FacialActionLibras_mediapipe_vLocal
 
 """
 
+import os
 from datetime import datetime
 import argparse
 from config.config import ROOT_DIR
@@ -75,10 +76,12 @@ def predict_all_db(base, config_experimental):
     print("Quantidade de Vídeos: " + str(len(lst_videos)))
 
 
+    old_name = ""
+    
     for i, vid in enumerate(sorted(lst_videos)):  # mude para percorrer toda a base [:5]
 
-        if i < 319:
-            continue
+        #if i < 319:
+        #    continue
 
         split_path = vid.split("/")
         nome_video = split_path[-1].split(".")[0]
@@ -97,10 +100,21 @@ def predict_all_db(base, config_experimental):
             config_experimental) #path do vídeo, path dos frames dos vídeos
 
         finished_time_, total_time_, h_, m_, s_ = tac(start_time)
+
+        name = "{0}checkpoint-predicts-{1}-{2}-{3}h{4}m{5}s-{6}.csv".format(db_output+'checkpoints/', base, dt_string, h_, m_, s_, config_experimental['name_experiment'])
+
         df_results.to_csv(
-            "{0}checkpoint-predicts-{1}-{2}-{3}h{4}m{5}s-{6}.csv".format(db_output+'checkpoints/', base, dt_string, h_, m_, s_, config_experimental['name_experiment']),
+            name,
             sep=";",
         )
+
+        if old_name != "":
+            os.remove(old_name+".csv")
+
+        old_name = name
+
+
+
 
     finished_time, total_time, h, m, s = tac(start_time)
 
