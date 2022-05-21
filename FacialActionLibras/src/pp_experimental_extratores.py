@@ -77,7 +77,7 @@ def predict_all_db(base, config_experimental):
 
 
     old_name = ""
-    
+
     for i, vid in enumerate(sorted(lst_videos)):  # mude para percorrer toda a base [:5]
 
         #if i < 319:
@@ -109,6 +109,7 @@ def predict_all_db(base, config_experimental):
         )
 
         if old_name != "":
+            print("Delete:",old_name)
             os.remove(old_name+".csv")
 
         old_name = name
