@@ -80,8 +80,8 @@ def predict_all_db(base, config_experimental):
 
     for i, vid in enumerate(sorted(lst_videos)):  # mude para percorrer toda a base [:5]
 
-        #if i < 319:
-        #    continue
+        if i < 550:
+            continue
 
         split_path = vid.split("/")
         nome_video = split_path[-1].split(".")[0]
@@ -108,8 +108,9 @@ def predict_all_db(base, config_experimental):
             sep=";",
         )
 
+        print(i,":::",name)
+
         if old_name != "":
-            print("Delete:",old_name)
             os.remove(old_name)
 
         old_name = name
