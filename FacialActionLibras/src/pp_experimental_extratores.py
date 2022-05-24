@@ -80,7 +80,7 @@ def predict_all_db(base, config_experimental):
 
     for i, vid in enumerate(sorted(lst_videos)):  # mude para percorrer toda a base [:5]
 
-        if i < 863:
+        if i < 1077:
             continue
 
         split_path = vid.split("/")
